@@ -1,13 +1,12 @@
-document.getElementById("button").addEventListener("click", handler);
+document.getElementById("button").addEventListener("click", apiRequest);
 
-function handler(e) {
-  e.target.removeEventListener(e.type, arguments.callee);
+function apiRequest(e) {
   fetch('https://async-workshops-api.herokuapp.com/people')
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(names){
-      document.getElementById("names").innerHTML = JSON.stringify(names);
-      console.log(JSON.stringify(names));
-    });
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(names){
+    users = JSON.stringify(names)
+    document.getElementById("names").innerHTML = users;
+  });
 }
