@@ -1,7 +1,7 @@
 document.getElementById("button").addEventListener("click", apiRequest);
 
 function apiRequest(e) {
-  fetch('https://async-workshops-api.herokuapp.com/people')
+  fetch('https://async-workshops-api.herokuapp.com/peoplessss')
   .then(function(response) {
     return response.json();
   })
@@ -11,5 +11,7 @@ function apiRequest(e) {
     console.log("users", users)
     document.getElementById("names").innerHTML = users;
   })
-  .catch(error => console.error("Error", error));
+  .catch(function(error) {
+    console.error("Error", error)
+  });
 }
