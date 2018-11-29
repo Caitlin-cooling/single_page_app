@@ -6,7 +6,10 @@ function apiRequest(e) {
     return response.json();
   })
   .then(function(names){
+    console.log("names", names)
     users = JSON.stringify(names)
+    console.log("users", users)
     document.getElementById("names").innerHTML = users;
-  });
+  })
+  .catch(error => console.error("Error", error));
 }
