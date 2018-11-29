@@ -1,4 +1,4 @@
-h# Single Page App
+# Single Page App
 The goal of this project is to practise using APIs in the simplest possible form.
 
 ### The Brief
